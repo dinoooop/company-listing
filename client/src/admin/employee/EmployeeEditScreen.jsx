@@ -3,11 +3,9 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { validateForm, validateFormLogo } from './employeeValidation';
 import { vr } from '../../helpers/vr';
 import ProtectedLayout from '../layouts/ProtectedLayout';
-import { useRef } from 'react';
 import useEmployeeStore from './useEmployeeStore';
 import InputField from '../../formc/InputField';
 import Submit from '../../formc/Submit';
-import InputFile from '../../formc/InputFile';
 import SingleSelectAuto from '../../formc/SingleSelectAuto';
 
 export default function () {
@@ -63,7 +61,7 @@ export default function () {
         } else {
             try {
                 await update(newFormData)
-                // navigate('/admin/employees')
+                navigate('/admin/employees')
             } catch (error) {
                 console.error(error)
             }

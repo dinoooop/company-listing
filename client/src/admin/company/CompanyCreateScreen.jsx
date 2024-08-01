@@ -33,7 +33,7 @@ export default function () {
         } else {
             try {
                 await store(newFormData)
-                // navigate('/admin/companies')
+                navigate('/admin/companies')
             } catch (error) {
                 console.error(error)
             }

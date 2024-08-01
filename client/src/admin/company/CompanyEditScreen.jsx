@@ -48,7 +48,7 @@ export default function () {
         } else {
             try {
                 await update(newFormData)
-                // navigate('/admin/companies')
+                navigate('/admin/companies')
             } catch (error) {
                 console.error(error)
             }
